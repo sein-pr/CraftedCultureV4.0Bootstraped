@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+:root {
+    --primary-clr: #244855;
+    --secondary-clr: #E64833;
+    --other-clr: #874F41;
+    --accent-clr: #90AEAD;
+    --background-clr: #fbfbfe;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-clr);
+}
+
+header .navbar-brand img {
+    height: 3rem;
+}
+
+header a.nav-link {
+    color: var(--primary-clr);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header a.nav-link:hover {
+    color: var(--secondary-clr);
+}
+
+header .btn-primary{
+    background-color: var(--primary-clr);
+    border: none;
+}
+
+header .btn-primary:hover{
+    background-color: var(--secondary-clr);
+}
+
+header .btn-outline-primary:nth-child(1){
+    border: 1px solid var(--secondary-clr);
+    color: var(--primary-clr);
+    font-weight: 600;
+}
+
+header .btn-outline-primary:nth-child(1):hover{
+    background-color: var(--primary-clr);
+    color: #fff;
+    border: none;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+    color: var(--secondary-clr);
+}
+/* Custom modal styling to match the original design */
+.modal .custom-modal-content {
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Adjust modal backdrop opacity */
+.modal-backdrop.show {
+    opacity: 0.8;
+}
+
+#navbarNav .custom-search {
+    display: flex;
+}
+/* ========== Search box css ends ========== */
+
+.c-item {
+    height: 90vh;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.hero .hero-btn{
+    background-color: var(--primary-clr);
+    border: none;
+}
+
+.hero .hero-btn:hover{
+    background-color: var(--secondary-clr);
+}
+
+.trending .card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.trending .card:hover {
+    transform: scale(1.05);
+}
+
+.trending .card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.trending .badge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    background-color: rgba(231, 76, 60, 0.7);
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.card-text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* footer */
+
+.footer-nav .contacts {
+    gap: 20px;
+}
+
+.footer-socials i {
+    font-size: 20px;
+}
+
+.footer-links-side a:hover {
+    color: #00afed; /* Change to match your design */
+}
+
+
+.shop-item {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 400px; /* Set a fixed height for uniformity */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    padding: 10px; /* Add some padding */
+    border-radius: 4px; /* Optional: for rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+}
+
+.shop-item img {
+    object-fit: cover;
+    height: 250px; /* Fixed height for images */
+    width: 100%;
+    border-radius: 4px;
+}
+
+.item-name {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 10px 0 5px; /* Margin to space out the item name */
+}
+
+.item-price {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px; /* Margin to space out the price */
+}
+
+.slider-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    scroll-behavior: smooth;
+}
+
+.similar h2 {
+    color: #6b6b6b;
+}
+
+.similar .similar-content {
+    margin-top: 25px;
+}
+
+.similar-content .similar-item {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 300px;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+.similar-content .similar-item img {
+    object-fit: cover;
+    margin-top: 2px;
+    border-radius: 4px;
+    width: 100%;
+    height: 250px;
+}
+
+.similar-content p {
+    text-align: start;
+}
+
+.similar-content .item-rating::before {
+    content: "⭐⭐⭐⭐⭐";
+}
+
+.similar-content .item-name {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.similar-content .item-price {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ============= floating css starts ============= */
+/* floating icon circular starts here */
+.floating-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.floating-cart:hover {
+    background-color: #00afed;
+}
+
+.floating-cart i {
+    font-size: 25px;
+}
+
+.floating-cart .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #00afed;
+    border: 2px solid white;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* floating icon circular ends here */
+
+.cart-modal {
+    display: none; /* Control display with JavaScript */
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 1px solid #00afed;
+    border-radius: 8px;
+    z-index: 1001;
+}
+
+.cart-modal .modal-content {
+    padding: 20px;
+}
+
+.cart-modal .modal-content h2 {
+    font-size: 20px;
+}
+
+.cart-modal .modal-content p {
+    margin: 10px 0;
+    color: #6b6b6b;
+}
+
+/* Button styles */
+.cart-modal .modal-content button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-modal .modal-content button:hover {
+    background-color: #00afed;
+}
+
+/* To show the modal */
+.cart-modal.show {
+    display: flex; /* Make the modal visible */
+}
+
+
+/* Hero Section */
+.page-hero {
+    background-color: #f3f2ee;
+}
+
+.page-hero h1 {
+    color: #4a4949;
+}
+
+
+.breadcrumb a {
+    color: #4a4949;
+    text-decoration: none;
+}
+
+.breadcrumb .active {
+    color: #e74c3c;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Item View Container */
+.item-view-container {
+    margin: 16px;
+}
+
+/* Custom Styles for Artist Portfolio Link */
+.artist-portfolio::after {
+    content: "\29C9";
+    margin-left: 8px;
+    color: #00afed;
+}
+
+/* Rating Style */
+.rating {
+    font-size: 24px;
+}
+
+.size-option .item:hover {
+    background-color: #e74c3c;
+}
+
+.variation .variation-item img:hover {
+    border: 2px solid #e74c3c;
+}
+
+/* Custom Styles for Button Hover */
+.btn button:hover {
+    color: #00afed;
+    background-color: #fff;
+    border: 1px solid #00afed;
+}
+
+.more {
+    margin: 16px;
+    overflow: hidden;
+}
+
+.comments hr {
+    margin: 0 16px;
+    width: 100%;
+}
+
+.more .item-btn span {
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+.more .item-btn span.active {
+    background-color: #00afed;
+    color: white;
+}
+
+.comment-item {
+    margin-bottom: 25px;
+}
+
+.comment-item .profile img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #00afed;
+}
+
+.rating-side {
+    width: 25%; /* Makes the rating section smaller */
+}
+
+.featured-image img {
+    border-radius: 8px;
+    height: auto;
+}
+
+.featured-image .content button:hover {
+    background-color: #00afed;
+    color: #fff;
+}
+
+/* Adjust carousel position on right */
+.rated .carousel .carousel-item {
+    position: relative;
+    transition: opacity 1s ease-in-out;
+}
+
+.rated .carousel .carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.icon {
+    border: 1px solid #00afed;
+    border-radius: 8px;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.contact-item:hover {
+    box-shadow: 0px 6px 5px 0px rgba(163, 163, 163, 1);
+}
+
+.contact-form .btn button:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.questions img {
+    height: 2.5em;
+}
+
+
+.page-hero h2,
+.page-hero p,
+.page-hero form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-hero form {
+    max-width: 400px;
+    border: 1px solid #00afed;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+.form-control.rounded-start {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn.rounded-end {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.text-primary {
+    color: #00afed !important;
+}
+
+.img-fluid:hover {
+    box-shadow: 3px 4px 15px rgba(0, 175, 237, 1);
+    transform: translateY(-5px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.item-blog .text-muted small {
+    display: flex;
+    gap: 10px;
+}
+
+.item-blog .text-muted span:nth-child(2)::before {
+    content: "|";
+    margin-right: 5px;
+}
